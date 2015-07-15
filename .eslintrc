@@ -1,0 +1,14 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "global-strict": [2, "always"], // force strict mode
+    "no-unused-vars": 0,            // ES6 classes don't play well, you will get a warning on all ES6 classes
+    "no-extend-native": 0           // allow extending native prototypes
+  }
+}

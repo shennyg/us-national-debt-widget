@@ -1,0 +1,25 @@
+{
+  "name": "debtClockWidget",
+  "version": "1.0.0",
+  "description": "Simply display the US National Debt on your website.",
+  "main": "dist/index.html",
+  "scripts": {
+    "serve": "broccoli serve",
+    "build": "sh ./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shennyg/us-national-debt-widget"
+  },
+  "author": "Shen DeShayne <shennyg@gmail.com>",
+  "license": "GPLv2",
+  "devDependencies": {
+    "broccoli": "^0.16.4",
+    "broccoli-babel-transpiler": "^5.2.3",
+    "broccoli-concat": "0.0.13",
+    "broccoli-funnel": "^0.2.3",
+    "broccoli-lint-eslint": "^1.0.1",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-uglify-js": "^0.1.3"
+  }
+}
