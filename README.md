@@ -1,6 +1,6 @@
 # US National Debt Widget
 
-The debt widgets aka "debt clocks" I found[^1] weren't available over a secure connection, this one doesn't require an external website, just upload a single file to your server.
+The debt widgets aka "debt clocks" I found<a href="#fn1"><sup>1</sup></a> weren't available over a secure connection, this one doesn't require an external website, just upload a single file to your server.
 
 # Usage
 
@@ -42,4 +42,4 @@ The file you will want is `dist/debtClock.min.js`.
 
 # Footnotes
 
-[^1]: US Debt Widgets without a valid SSL cert: http://www.usadebtclock.com/debt-clock-widget-for-website.php & http://zfacts.com/p/789.html
+[<a name="fn1">1</a>]: US Debt Widgets without a valid SSL cert: http://www.usadebtclock.com/debt-clock-widget-for-website.php & http://zfacts.com/p/789.html
