@@ -13,7 +13,6 @@ The debt widgets aka "debt clocks" I found<a href="#fn1"><sup>1</sup></a> weren'
 <script src="debtClock.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   (function() {
-    // the DOM will be available here
     var options = {};
     var debtClock = new DebtClock(options);
   })();
