@@ -4,13 +4,13 @@ The debt widgets aka "debt clocks" I found<a href="#fn1"><sup>1</sup></a> weren'
 
 # Usage
 
-1. Upload `debtClock.min.js` to your public webroot.
+1. Upload `debtClock.min.js` to your public webroot or use the [rawgit CDN version](https://cdn.rawgit.com/shennyg/us-national-debt-widget/d402d06f61b19aee6c134007f3cad3a0fe39a2a8/dist/debtClock.min.js).
 2. Add the script to your HTML with the correct path to the above file.
 3. Call the script after your DOM has loaded.
 
 ````html
 <h1 id="debtClock">Calculating debt...</h1>
-<script src="debtClock.min.js" type="text/javascript"></script>
+<script src="https://cdn.rawgit.com/shennyg/us-national-debt-widget/d402d06f61b19aee6c134007f3cad3a0fe39a2a8/dist/debtClock.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   (function() {
     var options = {};
@@ -37,7 +37,7 @@ The file you will want is `dist/debtClock.min.js`.
 
 # Todo
 
-- [ ] Add to free CDN service so people can use without hosting the file.
+- [x] Add to free CDN service so people can use without hosting the file.
 
 # Footnotes
 
