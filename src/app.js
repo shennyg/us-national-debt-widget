@@ -13,13 +13,13 @@ class DebtClock {
     this.elapsedTenths = 1;
     // increase in debt by the second
     // @todo confirm this number, currently from https://www.nabber.org/projects/debtcounter/
-    this.perSecondDebt = 31558.26;
+    this.perSecondDebt = 32026.40;
     this.perTenthDebt = this.perSecondDebt / 10;
     // to be more accurate periodically update the baseDebt and the baseDebt{Year,Month,Day} based on http://www.treasurydirect.gov/NP/debt/current
-    this.baseDebt = 18151890180391.62;
-    this.baseDebtYear = 2015;
-    this.baseDebtMonth = 7;
-    this.baseDebtDay = 13;
+    this.baseDebt = (typeof options.baseDebt != 'undefined') ? options.baseDebt : 19064879099682.52;
+    this.baseDebtYear = options.baseDebtYear || 2016;
+    this.baseDebtMonth = options.baseDebtMonth || 2;
+    this.baseDebtDay = options.baseDebtDay || 24;
     this.baseDebtDate = new Date(this.baseDebtYear, this.baseDebtMonth - 1, this.baseDebtDay); // Month is 0-11 in JavaScript
     this.now = new Date();
 
