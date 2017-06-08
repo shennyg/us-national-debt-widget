@@ -31,7 +31,7 @@ For fun this was built using [ES2015](https://babeljs.io/).
 
 # Build
 
-1. To build the files into `dist/` and test on [http://localhost:8000/](http://localhost:8000/), run `npm run build` or `sh ./build.sh`
+1. To build the files into `dist/` and test on [http://localhost:9002/](http://localhost:9002/), run `yarn run build` or `sh ./build.sh`
 
 The file you will want is `dist/debtClock.min.js`.
 
