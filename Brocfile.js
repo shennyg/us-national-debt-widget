@@ -1,3 +1,5 @@
+"use strict";
+
 // Babel transpiler
 var babel = require('broccoli-babel-transpiler');
 // filter trees (subsets of files)
@@ -21,25 +23,12 @@ var lintOptions = {
 appJs = eslint(appJs, lintOptions);
 
 // Transpile the source files
-appJs = babel(appJs);
-
-
-// Grab the polyfill file provided by the Babel library
-// If you only need IE10+ support you can leave out the browser-polyfill.js and save about 131Kb.
-var babelPath = require.resolve('broccoli-babel-transpiler');
-babelPath = babelPath.replace(/\/index.js$/, '');
-babelPath += '/node_modules/babel-core';
-var browserPolyfill = funnel(babelPath, {
-  files: ['browser-polyfill.js']
-});
-
-// Add the Babel polyfill to the tree of transpiled files
-appJs = mergeTrees([browserPolyfill, appJs]);
+appJs = babel(appJs, { browserPolyfill: true });
 
 // Concatenate all the JS files into a single file
 appJs = concat(appJs, {
   // we specify a concatenation order
-  inputFiles: ['browser-polyfill.js', '**/*.js'],
+  inputFiles: ['**/*.js'],
   outputFile: '/debtClock.min.js'
 });
 

@@ -26,8 +26,8 @@ The debt widgets aka "debt clocks" I found<a href="#fn1"><sup>1</sup></a> weren'
 For fun this was built using [ES2015](https://babeljs.io/).
 
 1. Install [broccoli](https://github.com/broccolijs/broccoli)
-2. Install required development modules, run `npm install`
-3. Run `npm run serve` or `broccoli serve` and open [http://localhost:4200/](http://localhost:4200/). Broccoli will watch for modifications to `src/app.js` and recompile so all you need to do is refresh your browser.
+2. Install required development modules, run `yarn install`
+3. Run `yarn run serve` or `broccoli serve` and open [http://localhost:4200/](http://localhost:4200/). Broccoli will watch for modifications to `src/app.js` and recompile so all you need to do is refresh your browser.
 
 # Build
 

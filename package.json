@@ -15,7 +15,7 @@
   "license": "GPLv2",
   "devDependencies": {
     "broccoli": "^0.16.4",
-    "broccoli-babel-transpiler": "^5.2.3",
+    "broccoli-babel-transpiler": "^5.6.2",
     "broccoli-concat": "0.0.13",
     "broccoli-funnel": "^0.2.3",
     "broccoli-lint-eslint": "^1.0.1",
