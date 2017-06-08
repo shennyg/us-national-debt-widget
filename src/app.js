@@ -5,7 +5,6 @@ class DebtClock {
     this.elementId = options.elementId || "debtClock";
     this.element = document.getElementById(this.elementId);
     this.currency = options.currency || "$";
-    this.amount = options.amount || 9999999;
     this.decimalLength = options.decimalLength || 0;
     this.updateInterval = options.updateInterval || 100; // 1/10th of a second
     this.autoUpdate = options.autoUpdate || true;
