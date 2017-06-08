@@ -10,6 +10,17 @@ class DebtClock {
     this.autoUpdate = options.autoUpdate || true;
     // the number of 1/10th of a seconds since the baseDebtDate
     this.elapsedTenths = 1;
+    /**
+     * pass in an anonymous function to override this widget's calculation
+     *
+     * E.g.
+     * var options = {
+     *   customCalculateFunction: function () {
+     *     return 0;
+     *   }
+     * };
+     */
+    this.customCalculateFunction = options.customCalculateFunction || null;
     // increase in debt by the second
     // @todo confirm this number, currently from https://www.nabber.org/projects/debtcounter/
     this.perSecondDebt = 32026.40;
@@ -24,7 +35,17 @@ class DebtClock {
 
     this.go();
   }
+
+  /**
+   * calculates debt
+   * @returns float
+   */
   calculate() {
+    // if we are passed in a custom calculate function, use it!
+    if (typeof this.customCalculateFunction === 'function') {
+      return this.customCalculateFunction();
+    }
+
     // a tenth of a second in miliseconds is 100 miliseconds
     // http://www.wolframalpha.com/input/?i=a+tenth+of+a+second+in+miliseconds
     // how many 10ths of a second since baseDebt was updated (aka this.baseDebtDate)
@@ -34,8 +55,12 @@ class DebtClock {
       );
     return (this.elapsedTenths * this.perTenthDebt) + this.baseDebt;
   }
+
+  /**
+   * kick off widget
+   */
   go() {
-    // initialy update element
+    // initially update element
     this.updateElement();
 
     // recursive
@@ -55,12 +80,27 @@ class DebtClock {
         );
     }
   }
+
+  /**
+   * calculates and formats debt amount
+   * @returns {string}
+   */
   formatAmount() {
     return this.calculate().formatMoney(this.decimalLength);
   }
+
+  /**
+   * Compile template and run the calculation.
+   * Use ES2015 Template literals to combine our data and template
+   * @returns {string}
+   */
   toString() {
     return `<span class="currency">${ this.currency }</span><span class="amount">${ this.formatAmount() }</span>`;
   }
+
+  /**
+   * Replace element with compiled template.
+   */
   updateElement() {
     this.element.innerHTML = this.toString();
   }

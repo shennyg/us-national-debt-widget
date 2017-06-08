@@ -19,7 +19,7 @@ The debt widgets aka "debt clocks" I found<a href="#fn1"><sup>1</sup></a> weren'
 </script>
 ````
 
-[See available options](https://github.com/shennyg/us-national-debt-widget/blob/master/src/app.js#L27).
+[See available options](https://github.com/shennyg/us-national-debt-widget/blob/master/src/app.js#L5).
 
 # Development
 
@@ -38,6 +38,7 @@ The file you will want is `dist/debtClock.min.js`.
 # Todo
 
 - [x] Add to free CDN service so people can use without hosting the file.
+- [x] Pass in custom debt calculation functions.
 
 # Footnotes
 
